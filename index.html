@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0a2540;
+            background: radial-gradient(circle, #1b3b6f, #0a2540);
             color: #ffffff;
             display: flex;
             align-items: center;
@@ -21,56 +21,57 @@
             padding: 20px;
         }
         .logo {
-            max-width: 200px;
+            max-width: 220px;
             margin-bottom: 20px;
-            z-index: 1;
+            z-index: 2;
             position: relative;
+            filter: drop-shadow(0 0 20px rgba(120, 199, 255, 0.8));
         }
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 15px;
-            z-index: 1;
+            z-index: 2;
             position: relative;
         }
         p {
-            font-size: 1rem;
-            margin-bottom: 25px;
-            z-index: 1;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            z-index: 2;
             position: relative;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .highlight {
             color: #78c7ff;
             font-weight: 600;
         }
         .contact {
-            font-size: 0.9rem;
-            margin-top: 30px;
+            font-size: 0.85rem;
+            margin-top: 20px;
             color: #cfe2ff;
-            z-index: 1;
+            z-index: 2;
             position: relative;
         }
-        .animated-bg {
+        .animated-bg::before, .animated-bg::after {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(#78c7ff, transparent);
-            opacity: 0.3;
-            animation: electricPulse 3s infinite alternate;
+            background: linear-gradient(45deg, rgba(120,199,255,0.2), transparent);
+            animation: electricFlow 4s infinite alternate;
             z-index: 0;
         }
-
-        @keyframes electricPulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.3;
-            }
-            100% {
-                transform: scale(1.2);
-                opacity: 0.6;
-            }
+        .animated-bg::after {
+            background: linear-gradient(-45deg, rgba(120,199,255,0.2), transparent);
+            animation-duration: 3s;
+        }
+        @keyframes electricFlow {
+            from { opacity: 0.3; }
+            to { opacity: 0.8; }
         }
     </style>
 </head>
@@ -80,19 +81,19 @@
         <img src="LiviaGO_LOGO_Transparente.svg" alt="LiviaGO" class="logo">
         <h1>A nova era da <span class="highlight">Inteligência Artificial</span> está chegando!</h1>
         <p>
-            Você conhece chatbots, mas já imaginou algo que ultrapassa os limites do tradicional?
-            Em breve, apresentaremos ao mundo uma <span class="highlight">nova IA 100% inovadora</span>, pronta para transformar tudo o que você conhece sobre inteligência artificial.
+            Algo além dos chatbots tradicionais está a caminho.<br>
+            Em breve, você conhecerá uma <span class="highlight">IA revolucionária</span> que mudará tudo o que você já viu.
         </p>
         <p>
-            Será um chatbot? Um assistente pessoal? Uma tecnologia revolucionária?
-            <br><strong>Prepare-se para descobrir!</strong>
+            Chatbot? Assistente virtual? Algo completamente novo?<br>
+            <strong>Você está pronto para descobrir?</strong>
         </p>
         <p>
-            <em>"A inovação está a um passo do futuro. E o futuro está mais próximo do que você imagina."</em>
+            <em>"A inovação está a um passo do futuro. E o futuro está aqui."</em>
         </p>
         <p class="contact">
-            Aguarde novas atualizações. Em breve estaremos em operação!<br>
-            Dúvidas ou curiosidades? Entre em contato: <strong>coredevmachine@outlook.com</strong>
+            Aguarde. Em breve entraremos em operação!<br>
+            Contato: <strong>coredevmachine@outlook.com</strong>
         </p>
     </div>
 

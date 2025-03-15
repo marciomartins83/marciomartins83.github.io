@@ -9,9 +9,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: url('fundo.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
+            background: white;
+            padding: 5mm;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -19,7 +18,16 @@
             text-align: center;
             overflow: hidden;
             position: relative;
-            padding: 20px;
+        }
+        .background-container {
+            position: absolute;
+            top: 5mm;
+            left: 5mm;
+            right: 5mm;
+            bottom: 5mm;
+            background: url('fundo.png') no-repeat center center fixed;
+            background-size: cover;
+            z-index: 0;
         }
         .logo {
             max-width: 220px;
@@ -27,7 +35,7 @@
             z-index: 2;
             position: relative;
             border: 2px solid rgba(255,255,255,0.5);
-            border-radius: 50%;
+            border-radius: 15px;
             background-color: rgba(0, 0, 0, 0.3);
             padding: 10px;
             box-shadow: 0 0 15px rgba(120, 199, 255, 0.9);
@@ -50,29 +58,18 @@
             margin-right: auto;
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
         }
-        .highlight {
-            color: #a1e4ff;
-            font-weight: 600;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-        }
-        .contact {
-            font-size: 0.85rem;
-            margin-top: 20px;
-            color: #cfe2ff;
-            z-index: 2;
-            position: relative;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-        }
         .content-wrapper {
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(3px);
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+    <div class="background-container"></div>
     <div class="content-wrapper">
         <img src="LiviaGO_LOGO_Transparente.svg" alt="LiviaGO" class="logo">
         <h1>A nova era da <span class="highlight">Inteligência Artificial</span> está chegando!</h1>
@@ -81,7 +78,7 @@
             Em breve, você conhecerá uma <span class="highlight">IA revolucionária</span> que mudará tudo o que você já viu.
         </p>
         <p>
-            Chatbot? Assistente virtual.? Algo completamente novo?<br>
+            Chatbot? Assistente virtual..? Algo completamente novo?<br>
             <strong>Você está pronto para descobrir?</strong>
         </p>
         <p>
